@@ -52,10 +52,10 @@ const About = () => {
           <Badge className="mb-4 bg-blue-primary text-white">
             من نحن
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             شركة المشهد سكاي للخدمات الفنية
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
             رائدون في مجال الخدمات الإنشائية والفنية، نقدم حلولاً متكاملة للبناء والتشطيب في دولة الإمارات
           </p>
         </div>
@@ -165,7 +165,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <Button variant="hero" size="lg" className="mt-8">
+          <Button variant="hero" size="lg" className="mt-8 px-8 py-4 text-base w-full sm:w-auto">
             تواصل معنا اليوم
           </Button>
         </div>

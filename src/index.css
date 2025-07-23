@@ -124,4 +124,36 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Mobile optimizations */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Ensure proper touch targets on mobile */
+  @media (max-width: 768px) {
+    button, 
+    a[role="button"], 
+    [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Improve readability on mobile */
+    body {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    /* Better spacing for mobile */
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+  /* Enhanced mobile scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
 }

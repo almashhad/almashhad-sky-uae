@@ -85,10 +85,10 @@ const Services = () => {
           <Badge className="mb-4 bg-blue-primary text-white">
             خدماتنا المتخصصة
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             حلول شاملة لجميع احتياجاتك
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
             نقدم مجموعة كاملة من الخدمات الإنشائية والفنية بأعلى معايير الجودة والاحترافية
           </p>
         </div>
@@ -178,11 +178,11 @@ const Services = () => {
                 <span className="text-foreground">خدمة عملاء متميزة 24/7</span>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="professional" size="lg">
+            <div className="flex flex-col gap-4 max-w-md mx-auto sm:max-w-none sm:mx-0">
+              <Button variant="professional" size="lg" className="w-full sm:w-auto py-4 text-base">
                 احصل على استشارة مجانية
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto py-4 text-base">
                 اطلب عرض سعر
               </Button>
             </div>

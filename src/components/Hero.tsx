@@ -24,15 +24,15 @@ const Hero = () => {
           </Badge>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="block">شريكك الموثوق</span>
             <span className="block text-blue-light">لجميع الخدمات الإنشائية والفنية</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl mb-8 text-blue-light leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 text-blue-light leading-relaxed px-4 sm:px-0">
             المشهد سكاي للخدمات الفنية - حلول شاملة للبناء والتشطيب
-            <br />
+            <br className="hidden sm:block" />
             من التصميم إلى التنفيذ في جميع إمارات دولة الإمارات
           </p>
 
@@ -73,11 +73,11 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-3">
+          <div className="flex flex-col gap-4 justify-center max-w-lg mx-auto">
+            <Button variant="hero" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full">
               احصل على عرض سعر مجاني
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-white hover:bg-white hover:text-primary w-full">
               تواصل معنا الآن
             </Button>
           </div>

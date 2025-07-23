@@ -55,10 +55,10 @@ const Contact = () => {
           <Badge className="mb-4 bg-blue-primary text-white">
             تواصل معنا
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             احصل على استشارة مجانية
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
             نحن هنا لخدمتكم على مدار الساعة. تواصلوا معنا للحصول على استشارة مجانية وعرض سعر مفصل
           </p>
         </div>
@@ -137,12 +137,12 @@ const Contact = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button variant="professional" size="lg" className="flex-1">
+                  <div className="flex flex-col gap-4">
+                    <Button variant="professional" size="lg" className="w-full py-4 text-base">
                       <Send className="h-5 w-5 ml-2" />
                       إرسال الطلب
                     </Button>
-                    <Button variant="outline" size="lg" className="flex-1">
+                    <Button variant="outline" size="lg" className="w-full py-4 text-base">
                       <Phone className="h-5 w-5 ml-2" />
                       اتصل بنا مباشرة
                     </Button>
@@ -233,11 +233,11 @@ const Contact = () => {
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               تواصل معنا اليوم واحصل على استشارة مجانية وعرض سعر مفصل لمشروعك
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="professional" size="lg" className="text-lg px-8">
+            <div className="flex flex-col gap-4 justify-center max-w-md mx-auto sm:max-w-none sm:mx-0 sm:flex-row">
+              <Button variant="professional" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto">
                 احصل على عرض سعر مجاني
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
+              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto">
                 حدد موعد استشارة
               </Button>
             </div>
