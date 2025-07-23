@@ -15,7 +15,7 @@ import {
   TreePine,
   Star
 } from "lucide-react";
-import servicesImage from "@/assets/new-services-image.jpg";
+import servicesImage from "@/assets/services-collage.jpg";
 
 const Services = () => {
   const serviceCategories = [
