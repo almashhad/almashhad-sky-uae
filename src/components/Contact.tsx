@@ -19,7 +19,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "اتصل بنا",
-      details: ["+971 58 966 4169"],
+      details: ["+971 50 732 3644"],
       color: "bg-green-500"
     },
     {

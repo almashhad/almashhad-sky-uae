@@ -85,7 +85,7 @@ const Hero = () => {
           {/* Contact Info */}
           <div className="mt-8 text-blue-light">
             <p className="text-lg font-semibold">اتصل بنا الآن:</p>
-            <p className="text-2xl font-bold" dir="ltr">+971 58 966 4169</p>
+            <p className="text-2xl font-bold" dir="ltr">+971 50 732 3644</p>
           </div>
         </div>
       </div>
