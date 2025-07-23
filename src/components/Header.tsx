@@ -18,7 +18,7 @@ const Header = () => {
               </div>
               <div className="flex items-center gap-1">
                 <Mail className="h-4 w-4" />
-                <span dir="ltr">saddam.almashhad@gmail.com</span>
+                <span dir="ltr">info@almashhadsky.com</span>
               </div>
             </div>
             <div className="flex items-center gap-1">

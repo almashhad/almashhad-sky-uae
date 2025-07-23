@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "البريد الإلكتروني",
-      details: ["saddam.almashhad@gmail.com"],
+      details: ["info@almashhadsky.com"],
       color: "bg-blue-primary"
     },
     {
