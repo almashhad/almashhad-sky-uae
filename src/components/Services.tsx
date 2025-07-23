@@ -15,7 +15,7 @@ import {
   TreePine,
   Star
 } from "lucide-react";
-import servicesImage from "/lovable-uploads/849d1d3a-93d7-46be-8e98-61bcb7a9581a.png";
+import servicesImage from "/lovable-uploads/86d97892-3432-4ede-85a9-e2c17de16293.png";
 
 const Services = () => {
   const serviceCategories = [
