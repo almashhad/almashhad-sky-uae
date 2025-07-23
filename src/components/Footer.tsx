@@ -41,8 +41,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2">المشهد سكاي</h3>
-              <p className="text-blue-light text-lg">للخدمات الفنية</p>
+              <img 
+                src="/lovable-uploads/68d130f1-c993-4bcc-8371-14b27802c320.png" 
+                alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY"
+                className="h-16 w-auto mb-4"
+              />
             </div>
             
             <p className="text-blue-light mb-6 leading-relaxed">

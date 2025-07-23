@@ -34,10 +34,11 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary">
-              <div className="text-lg">المشهد سكاي</div>
-              <div className="text-sm text-muted-foreground">للخدمات الفنية</div>
-            </div>
+            <img 
+              src="/lovable-uploads/68d130f1-c993-4bcc-8371-14b27802c320.png" 
+              alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY"
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
