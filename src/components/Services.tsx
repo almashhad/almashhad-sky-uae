@@ -15,7 +15,7 @@ import {
   TreePine,
   Star
 } from "lucide-react";
-import servicesImage from "@/assets/services-collage.jpg";
+import servicesImage from "/lovable-uploads/849d1d3a-93d7-46be-8e98-61bcb7a9581a.png";
 
 const Services = () => {
   const serviceCategories = [
@@ -145,7 +145,7 @@ const Services = () => {
             <img 
               src={servicesImage} 
               alt="خدماتنا المتخصصة" 
-              className="rounded-2xl shadow-professional w-full h-auto"
+              className="rounded-2xl shadow-professional w-full h-auto object-cover max-h-[500px] md:max-h-[600px]"
             />
           </div>
           <div>
