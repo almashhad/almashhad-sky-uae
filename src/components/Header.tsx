@@ -37,7 +37,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/c4ceef4c-569b-404e-b7f2-bb64353527d2.png" 
               alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY FOR TECHNICAL SERVICES"
-              className="h-10 sm:h-12 md:h-14 w-auto max-w-[120px] sm:max-w-[140px] md:max-w-[160px]"
+              className="h-8 sm:h-10 md:h-12 w-auto max-w-[100px] sm:max-w-[120px] md:max-w-[140px]"
             />
           </div>
 
