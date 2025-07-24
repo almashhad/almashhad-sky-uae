@@ -38,6 +38,8 @@ export default {
 				'blue-secondary': 'hsl(var(--blue-secondary))',
 				'blue-light': 'hsl(var(--blue-light))',
 				'blue-dark': 'hsl(var(--blue-dark))',
+				'gold-accent': 'hsl(var(--gold-accent))',
+				'premium-gray': 'hsl(var(--premium-gray))',
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -72,12 +74,16 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)'
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-premium': 'var(--gradient-premium)',
+				'gradient-glass': 'var(--gradient-glass)'
 			},
 			boxShadow: {
 				'professional': 'var(--shadow-professional)',
 				'card': 'var(--shadow-card)',
-				'hover': 'var(--shadow-hover)'
+				'hover': 'var(--shadow-hover)',
+				'glass': 'var(--shadow-glass)',
+				'glow': 'var(--shadow-glow)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',

@@ -16,76 +16,110 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center text-white">
+        <div className="max-w-5xl mx-auto text-center text-white">
+          
+          {/* Premium Logo Section */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/68d130f1-c993-4bcc-8371-14b27802c320.png" 
+                alt="المشهد سكاي للخدمات الفنية" 
+                className="h-24 sm:h-32 md:h-40 w-auto filter drop-shadow-2xl animate-pulse"
+              />
+              <div className="absolute inset-0 bg-gradient-premium opacity-20 rounded-lg animate-pulse"></div>
+            </div>
+          </div>
+
           {/* License Badge */}
-          <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
-            <Award className="h-4 w-4 ml-2" />
+          <Badge className="mb-8 bg-gradient-glass backdrop-blur-md text-white border border-white/30 hover:bg-white/20 transition-all duration-300 shadow-glow text-sm sm:text-base px-6 py-3">
+            <Award className="h-4 w-4 ml-2 text-gold-accent" />
             مرخص من دائرة التنمية الاقتصادية - دبي #1478322
           </Badge>
 
-          {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="block">شريكك الموثوق</span>
-            <span className="block text-blue-light">لجميع الخدمات الإنشائية والفنية</span>
-          </h1>
+          {/* Revolutionary Main Heading */}
+          <div className="mb-10">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight">
+              <span className="block bg-gradient-to-r from-white via-blue-light to-blue-secondary bg-clip-text text-transparent animate-pulse">
+                نبني ما تتخيله
+              </span>
+              <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gold-accent font-bold mt-2">
+                ننجز ما نعد به
+              </span>
+            </h1>
+            <div className="w-32 h-1.5 bg-gradient-premium mx-auto rounded-full shadow-glow"></div>
+          </div>
 
-          {/* Subheading */}
-          <p className="text-lg sm:text-xl md:text-2xl mb-8 text-blue-light leading-relaxed px-4 sm:px-0">
-            المشهد سكاي للخدمات الفنية - حلول شاملة للبناء والتشطيب
+          {/* Premium Subtitle */}
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
+            الشريك الرائد في تنفيذ المشاريع الإنشائية الكبرى والصغرى
+          </h2>
+
+          {/* Professional Description */}
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-10 text-blue-light leading-relaxed max-w-4xl mx-auto px-4 sm:px-0">
+            من التصميم إلى التسليم... من الأساسات إلى اللمسة الأخيرة
             <br className="hidden sm:block" />
-            من التصميم إلى التنفيذ في جميع إمارات دولة الإمارات
+            نقدم حلول إنشائية متكاملة تحت سقف واحد في جميع إمارات دولة الإمارات
           </p>
 
-          {/* Statistics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-light">500+</div>
-              <div className="text-sm text-white/80">مشروع مكتمل</div>
+          {/* Enhanced Statistics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+            <div className="text-center bg-gradient-glass backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:shadow-glow transition-all duration-300">
+              <div className="text-3xl sm:text-4xl font-black text-gold-accent">+500</div>
+              <div className="text-sm sm:text-base text-white/90 font-semibold">مشروع منجز بنجاح</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-light">10+</div>
-              <div className="text-sm text-white/80">سنوات خبرة</div>
+            <div className="text-center bg-gradient-glass backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:shadow-glow transition-all duration-300">
+              <div className="text-3xl sm:text-4xl font-black text-gold-accent">+10</div>
+              <div className="text-sm sm:text-base text-white/90 font-semibold">سنوات من التميز</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-light">7</div>
-              <div className="text-sm text-white/80">جميع الإمارات</div>
+            <div className="text-center bg-gradient-glass backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:shadow-glow transition-all duration-300">
+              <div className="text-3xl sm:text-4xl font-black text-gold-accent">7</div>
+              <div className="text-sm sm:text-base text-white/90 font-semibold">إمارات نخدمها</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-light">24/7</div>
-              <div className="text-sm text-white/80">خدمة العملاء</div>
-            </div>
-          </div>
-
-          {/* Features */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-              <CheckCircle className="h-5 w-5 text-blue-light" />
-              <span className="text-sm">مرخص ومعتمد</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-              <Users className="h-5 w-5 text-blue-light" />
-              <span className="text-sm">فريق متخصص</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-              <Clock className="h-5 w-5 text-blue-light" />
-              <span className="text-sm">مواعيد التسليم</span>
+            <div className="text-center bg-gradient-glass backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:shadow-glow transition-all duration-300">
+              <div className="text-3xl sm:text-4xl font-black text-gold-accent">%99</div>
+              <div className="text-sm sm:text-base text-white/90 font-semibold">معدل رضا العملاء</div>
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col gap-4 justify-center max-w-lg mx-auto">
-            <Button variant="hero" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full">
-              احصل على عرض سعر مجاني
+          {/* Premium Features */}
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <div className="flex items-center gap-3 bg-gradient-glass backdrop-blur-md rounded-full px-6 py-3 border border-white/20 hover:shadow-glow transition-all duration-300">
+              <CheckCircle className="h-5 w-5 text-gold-accent" />
+              <span className="text-sm sm:text-base font-semibold">مرخص ومعتمد</span>
+            </div>
+            <div className="flex items-center gap-3 bg-gradient-glass backdrop-blur-md rounded-full px-6 py-3 border border-white/20 hover:shadow-glow transition-all duration-300">
+              <Users className="h-5 w-5 text-gold-accent" />
+              <span className="text-sm sm:text-base font-semibold">فريق من الخبراء</span>
+            </div>
+            <div className="flex items-center gap-3 bg-gradient-glass backdrop-blur-md rounded-full px-6 py-3 border border-white/20 hover:shadow-glow transition-all duration-300">
+              <Clock className="h-5 w-5 text-gold-accent" />
+              <span className="text-sm sm:text-base font-semibold">التزام بالمواعيد</span>
+            </div>
+          </div>
+
+          {/* Premium CTA Buttons */}
+          <div className="flex flex-col gap-4 justify-center max-w-lg mx-auto mb-8">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 w-full bg-gradient-premium hover:shadow-glow transition-all duration-300 font-bold border-0 hover:scale-105"
+            >
+              احجز استشارة مجانية الآن
             </Button>
-            <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-white hover:bg-white hover:text-primary w-full">
-              تواصل معنا الآن
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 border-2 border-white/50 text-white hover:bg-gradient-glass hover:border-gold-accent hover:text-gold-accent w-full transition-all duration-300 font-bold backdrop-blur-md hover:shadow-glow hover:scale-105"
+            >
+              شاهد أعمالنا المميزة
             </Button>
           </div>
 
-          {/* Contact Info */}
-          <div className="mt-8 text-blue-light">
-            <p className="text-lg font-semibold">اتصل بنا الآن:</p>
-            <p className="text-2xl font-bold" dir="ltr">+971 50 732 3644</p>
+          {/* Enhanced Contact Info */}
+          <div className="bg-gradient-glass backdrop-blur-md rounded-2xl p-6 border border-white/20 max-w-md mx-auto shadow-glow">
+            <p className="text-lg sm:text-xl font-bold text-gold-accent mb-2">اتصل بنا الآن:</p>
+            <p className="text-2xl sm:text-3xl font-black text-white" dir="ltr">+971 50 732 3644</p>
+            <p className="text-sm text-blue-light mt-2">جاهزون لخدمتك 24/7</p>
           </div>
         </div>
       </div>
