@@ -18,16 +18,6 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-5xl mx-auto text-center text-white">
           
-          {/* Premium Logo Section */}
-          <div className="mb-8 flex justify-center">
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-2xl">
-              <img 
-                src="/lovable-uploads/c4ceef4c-569b-404e-b7f2-bb64353527d2.png" 
-                alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY FOR TECHNICAL SERVICES" 
-                className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px] relative z-10"
-              />
-            </div>
-          </div>
 
           {/* License Badge */}
           <Badge className="mb-8 bg-gradient-glass backdrop-blur-md text-white border border-white/30 hover:bg-white/20 transition-all duration-300 shadow-glow text-sm sm:text-base px-6 py-3">
