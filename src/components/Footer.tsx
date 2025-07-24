@@ -42,8 +42,8 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <img 
-                src="/lovable-uploads/68d130f1-c993-4bcc-8371-14b27802c320.png" 
-                alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY"
+                src="/lovable-uploads/c4ceef4c-569b-404e-b7f2-bb64353527d2.png" 
+                alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY FOR TECHNICAL SERVICES"
                 className="h-16 w-auto mb-4"
               />
             </div>
