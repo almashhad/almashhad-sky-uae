@@ -51,7 +51,7 @@ const Hero = () => {
 
           {/* Premium Subtitle */}
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
-            الشريك الرائد في تنفيذ المشاريع الإنشائية الكبرى والصغرى
+            المشهد سكاي للمقاولات: نبني • نرمم • نشطب • نطور
           </h2>
 
           {/* Professional Description */}
