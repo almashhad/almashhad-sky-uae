@@ -20,13 +20,12 @@ const Hero = () => {
           
           {/* Premium Logo Section */}
           <div className="mb-8 flex justify-center">
-            <div className="relative">
+            <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-2xl">
               <img 
                 src="/lovable-uploads/c4ceef4c-569b-404e-b7f2-bb64353527d2.png" 
                 alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY FOR TECHNICAL SERVICES" 
-                className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px] filter drop-shadow-2xl"
+                className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px] relative z-10"
               />
-              <div className="absolute inset-0 bg-gradient-premium opacity-10 rounded-lg"></div>
             </div>
           </div>
 
