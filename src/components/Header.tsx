@@ -35,9 +35,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/68d130f1-c993-4bcc-8371-14b27802c320.png" 
-              alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY"
-              className="h-12 w-auto"
+              src="/lovable-uploads/c4ceef4c-569b-404e-b7f2-bb64353527d2.png" 
+              alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY FOR TECHNICAL SERVICES"
+              className="h-10 sm:h-12 md:h-14 w-auto max-w-[120px] sm:max-w-[140px] md:max-w-[160px]"
             />
           </div>
 

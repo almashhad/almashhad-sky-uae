@@ -22,11 +22,11 @@ const Hero = () => {
           <div className="mb-8 flex justify-center">
             <div className="relative">
               <img 
-                src="/lovable-uploads/68d130f1-c993-4bcc-8371-14b27802c320.png" 
-                alt="المشهد سكاي للخدمات الفنية" 
-                className="h-24 sm:h-32 md:h-40 w-auto filter drop-shadow-2xl animate-pulse"
+                src="/lovable-uploads/c4ceef4c-569b-404e-b7f2-bb64353527d2.png" 
+                alt="المشهد سكاي للخدمات الفنية - ALMASHHAD SKY FOR TECHNICAL SERVICES" 
+                className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px] filter drop-shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-premium opacity-20 rounded-lg animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-premium opacity-10 rounded-lg"></div>
             </div>
           </div>
 
