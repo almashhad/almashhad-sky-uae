@@ -157,9 +157,6 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" size="sm" className="w-full mt-auto">
-                  احصل على عرض سعر
-                </Button>
               </CardContent>
             </Card>
           ))}
