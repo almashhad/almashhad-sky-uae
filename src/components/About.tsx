@@ -49,61 +49,109 @@ const About = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-blue-primary text-white">
+          <Badge className="mb-4 bg-gradient-primary text-white">
             من نحن
           </Badge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            شركة المشهد سكاي للخدمات الفنية
+            🏗️ شركة المشهد سكاي للخدمات الفنية
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-            رائدون في مجال الخدمات الإنشائية والفنية، نقدم حلولاً متكاملة للبناء والتشطيب في دولة الإمارات
+            نحن شركة مقاولات شاملة نقدم خدمات واسعة في جميع مجالات البناء والتشطيب.
           </p>
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Company Image */}
-          <div className="order-2 lg:order-1">
-            <img 
-              src={companyImage} 
-              alt="مبنى شركة المشهد سكاي" 
-              className="rounded-2xl shadow-professional w-full h-auto"
-            />
-          </div>
+        {/* Main Content */}
+        <div className="max-w-4xl mx-auto mb-16">
+          {/* Philosophy */}
+          <Card className="mb-8 bg-gradient-card border-0 shadow-glass">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-2">
+                💡 <span>فلسفتنا بسيطة:</span>
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                نحول تصوركم إلى واقع ملموس، مهما كان معقداً.
+              </p>
+            </CardContent>
+          </Card>
 
-          {/* Company Story */}
-          <div className="order-1 lg:order-2">
-            <h3 className="text-3xl font-bold text-foreground mb-6">
-              قصة نجاح تمتد لأكثر من عقد
-            </h3>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                تأسست شركة المشهد سكاي للخدمات الفنية كشركة رائدة في مجال المقاولات العامة والخدمات الفنية المتخصصة، 
-                برخصة رقم #1478322 من دائرة التنمية الاقتصادية بدبي.
-              </p>
-              <p>
-                نفخر بتقديم خدمات شاملة تشمل البناء والتشطيب والصيانة لجميع أنواع المشاريع السكنية والتجارية 
-                في جميع إمارات دولة الإمارات العربية المتحدة.
-              </p>
-              <p>
-                بفضل فريقنا من المهندسين والفنيين المعتمدين، نضمن تنفيذ جميع المشاريع وفقاً لأعلى معايير الجودة 
-                والسلامة، مع الالتزام بالمواعيد المحددة وتحقيق رضا عملائنا الكامل.
-              </p>
-            </div>
-
-            {/* License Info */}
-            <div className="mt-8 p-6 bg-gradient-card rounded-lg border border-blue-light">
-              <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                <Award className="h-5 w-5 text-blue-primary" />
-                معلومات الترخيص
-              </h4>
-              <div className="text-sm text-muted-foreground space-y-1">
-                <p><strong>رقم الرخصة:</strong> #1478322</p>
-                <p><strong>الجهة المرخصة:</strong> دائرة التنمية الاقتصادية - دبي</p>
-                <p><strong>نوع النشاط:</strong> المقاولات العامة والخدمات الفنية</p>
+          {/* Expertise */}
+          <Card className="mb-8 bg-gradient-card border-0 shadow-glass">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+                🎯 <span>خبرتنا تشمل:</span>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                <Badge variant="secondary" className="py-2 px-4 text-sm">الإنشاءات الكبرى</Badge>
+                <Badge variant="secondary" className="py-2 px-4 text-sm">التشطيبات الفاخرة</Badge>
+                <Badge variant="secondary" className="py-2 px-4 text-sm">الأنظمة التقنية</Badge>
+                <Badge variant="secondary" className="py-2 px-4 text-sm">الأعمال الحرفية</Badge>
+                <Badge variant="secondary" className="py-2 px-4 text-sm">الديكور والتصميم</Badge>
               </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
+
+          {/* Work Process */}
+          <Card className="mb-8 bg-gradient-card border-0 shadow-glass">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+                ⚡ <span>طريقة عملنا:</span>
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-2">
+                    <Target className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="text-sm font-semibold">فهم رؤيتكم</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-2">
+                    <MapPin className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="text-sm font-semibold">تخطيط دقيق</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-2">
+                    <Users className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="text-sm font-semibold">تنفيذ متقن</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-2">
+                    <CheckCircle className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="text-sm font-semibold">تسليم مثالي</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Mission Statement */}
+          <Card className="mb-8 bg-gradient-card border-0 shadow-glass">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold text-gradient-primary mb-4">
+                🌟 شعارنا: "نبني ما تتخيله"
+              </h3>
+              <p className="text-lg text-muted-foreground mb-4">
+                من الفكرة الأولى إلى اللمسة الأخيرة، نحن شريككم في تحويل الأحلام إلى مشاريع حقيقية.
+              </p>
+              <p className="text-base text-foreground font-semibold">
+                🏆 لأننا نؤمن أن كل مشروع يستحق فريق متخصص يحقق أهدافه بجودة عالمية.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* License Info */}
+          <Card className="bg-gradient-primary text-white border-0 shadow-glow">
+            <CardContent className="p-8 text-center">
+              <h4 className="font-bold text-xl mb-4 flex items-center justify-center gap-2">
+                <Award className="h-6 w-6" />
+                مرخص من دائرة التنمية الاقتصادية - دبي #1478322
+              </h4>
+              <p className="text-gold-accent">
+                شركة معتمدة ومرخصة رسمياً لضمان أعلى معايير الجودة والثقة
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Achievements Grid */}
