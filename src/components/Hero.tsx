@@ -116,10 +116,36 @@ const Hero = () => {
           </div>
 
           {/* Enhanced Contact Info */}
-          <div className="bg-gradient-glass backdrop-blur-md rounded-2xl p-6 border border-white/20 max-w-md mx-auto shadow-glow">
-            <p className="text-lg sm:text-xl font-bold text-gold-accent mb-2">اتصل بنا الآن:</p>
-            <p className="text-2xl sm:text-3xl font-black text-white" dir="ltr">+971 50 732 3644</p>
-            <p className="text-sm text-blue-light mt-2">جاهزون لخدمتك 24/7</p>
+          <div className="max-w-md mx-auto space-y-4">
+            {/* Contact Button with Animation */}
+            <Button 
+              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold text-lg py-6 px-8 rounded-2xl shadow-glow border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-pulse hover:animate-none group"
+            >
+              <div className="flex items-center justify-center gap-3">
+                <span className="group-hover:animate-bounce">📞</span>
+                <span>اتصل بنا الآن</span>
+                <span className="group-hover:animate-bounce">✨</span>
+              </div>
+            </Button>
+            
+            {/* Get Quote Button with Animation */}
+            <Button 
+              variant="outline"
+              className="w-full border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold text-lg py-6 px-8 rounded-2xl backdrop-blur-md transition-all duration-300 transform hover:scale-105 hover:shadow-glow group"
+            >
+              <div className="flex items-center justify-center gap-3">
+                <span className="group-hover:rotate-12 transition-transform duration-300">💰</span>
+                <span>احصل على سعر فوري</span>
+                <span className="group-hover:-rotate-12 transition-transform duration-300">⚡</span>
+              </div>
+            </Button>
+
+            {/* Contact Info */}
+            <div className="bg-gradient-glass backdrop-blur-md rounded-xl p-4 border border-white/20 text-center">
+              <p className="text-lg font-bold text-gold-accent mb-1">هاتف:</p>
+              <p className="text-xl font-black text-white" dir="ltr">+971 50 732 3644</p>
+              <p className="text-xs text-blue-light mt-1">متاحون 24/7</p>
+            </div>
           </div>
         </div>
       </div>
