@@ -140,12 +140,6 @@ const Hero = () => {
               </div>
             </Button>
 
-            {/* Contact Info */}
-            <div className="bg-gradient-glass backdrop-blur-md rounded-xl p-4 border border-white/20 text-center">
-              <p className="text-lg font-bold text-gold-accent mb-1">هاتف:</p>
-              <p className="text-xl font-black text-white" dir="ltr">+971 50 732 3644</p>
-              <p className="text-xs text-blue-light mt-1">متاحون 24/7</p>
-            </div>
           </div>
         </div>
       </div>
