@@ -100,13 +100,6 @@ const Hero = () => {
           {/* Premium CTA Buttons */}
           <div className="flex flex-col gap-4 justify-center max-w-lg mx-auto mb-8">
             <Button 
-              variant="hero" 
-              size="lg" 
-              className="text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 w-full bg-gradient-premium hover:shadow-glow transition-all duration-300 font-bold border-0 hover:scale-105"
-            >
-              احجز استشارة مجانية الآن
-            </Button>
-            <Button 
               variant="outline" 
               size="lg" 
               className="text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 border-2 border-white/50 text-white hover:bg-gradient-glass hover:border-gold-accent hover:text-gold-accent w-full transition-all duration-300 font-bold backdrop-blur-md hover:shadow-glow hover:scale-105"
