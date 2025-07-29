@@ -189,6 +189,7 @@ export const translations = {
     qualityCommitment: "نخدم جميع إمارات دولة الإمارات بأعلى معايير الجودة والاحترافية",
     allRightsReserved: "© 2024 المشهد سكاي للخدمات الفنية. جميع الحقوق محفوظة.",
     economicDepartment: "دائرة التنمية الاقتصادية - دبي",
+    licenseNumber: "رخصة #1478322",
     
     // Language Selector
     chooseLanguage: "اختر لغتك المفضلة",
@@ -399,6 +400,7 @@ export const translations = {
     qualityCommitment: "We serve all Emirates of the UAE with the highest standards of quality and professionalism",
     allRightsReserved: "© 2024 Almashhad Sky Technical Services. All rights reserved.",
     economicDepartment: "Economic Development Department - Dubai",
+    licenseNumber: "License #1478322",
     
     // Language Selector
     chooseLanguage: "Choose Your Preferred Language",

@@ -231,7 +231,7 @@ const Footer = () => {
               {t('allRightsReserved')}
             </div>
             <div className="flex items-center gap-4 text-blue-light text-sm">
-              <span>رخصة #1478322</span>
+              <span>{t('licenseNumber')}</span>
               <span>•</span>
               <span>{t('economicDepartment')}</span>
             </div>
