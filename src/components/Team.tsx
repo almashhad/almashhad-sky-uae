@@ -2,6 +2,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 
 const Team = () => {
   const { t } = useTranslation();
+  
   const teamImages = [
     "/lovable-uploads/deaa5756-eff0-478e-b762-fd451fa29b69.png",
     "/lovable-uploads/7e45055c-2380-41e6-86e0-b4a54aac7f97.png", 
@@ -43,7 +44,7 @@ const Team = () => {
             >
               <img 
                 src={image}
-                alt="فريق العمل"
+                alt={t('ourTeam')}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />

@@ -13,31 +13,34 @@ import {
   Shield,
   Award
 } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Contact = () => {
+  const { t } = useTranslation();
+  
   const contactInfo = [
     {
       icon: Phone,
-      title: "اتصل بنا",
+      title: t('callUs'),
       details: ["+971 50 732 3644"],
       color: "bg-green-500"
     },
     {
       icon: Mail,
-      title: "البريد الإلكتروني",
+      title: t('email'),
       details: ["info@almashhadsky.com"],
       color: "bg-blue-primary"
     },
     {
       icon: MapPin,
-      title: "منطقة الخدمة",
-      details: ["جميع إمارات دولة الإمارات العربية المتحدة"],
+      title: t('serviceArea'),
+      details: [t('allEmirates')],
       color: "bg-blue-secondary"
     },
     {
       icon: Clock,
-      title: "ساعات العمل",
-      details: ["السبت - الخميس: 8:00 ص - 6:00 م", "الجمعة: مغلق"],
+      title: t('workingHours'),
+      details: [t('workingDays'), t('friday')],
       color: "bg-orange-500"
     }
   ];
@@ -53,13 +56,13 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-blue-primary text-white">
-            تواصل معنا
+            {t('contactUsTitle')}
           </Badge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            احصل على استشارة مجانية
+            {t('getFreeConsultation')}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-            نحن هنا لخدمتكم على مدار الساعة. تواصلوا معنا للحصول على استشارة مجانية وعرض سعر مفصل
+            {t('contactDescription')}
           </p>
         </div>
 
@@ -70,7 +73,7 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-foreground flex items-center gap-3">
                   <MessageSquare className="h-6 w-6 text-blue-primary" />
-                  أرسل لنا رسالة
+                  {t('sendMessage')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,19 +81,19 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        الاسم الكامل *
+                        {t('fullName')} *
                       </label>
                       <Input 
-                        placeholder="أدخل اسمك الكامل"
+                        placeholder={t('fullName')}
                         className="w-full"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        رقم الهاتف *
+                        {t('phoneNumber')} *
                       </label>
                       <Input 
-                        placeholder="أدخل رقم هاتفك"
+                        placeholder={t('phoneNumber')}
                         type="tel"
                         className="w-full"
                         dir="ltr"
@@ -100,10 +103,10 @@ const Contact = () => {
                   
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      البريد الإلكتروني *
+                      {t('email')} *
                     </label>
                     <Input 
-                      placeholder="أدخل بريدك الإلكتروني"
+                      placeholder={t('email')}
                       type="email"
                       className="w-full"
                       dir="ltr"
@@ -112,26 +115,26 @@ const Contact = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      نوع الخدمة المطلوبة
+                      {t('serviceType')}
                     </label>
                     <select className="w-full px-3 py-2 border border-input rounded-md bg-background">
-                      <option>اختر نوع الخدمة</option>
-                      <option>البناء والإنشاء</option>
-                      <option>التجديد والتطوير</option>
-                      <option>الطلاء والديكور</option>
-                      <option>الكهرباء والسباكة</option>
-                      <option>النجارة والأرضيات</option>
-                      <option>صيانة عامة</option>
+                      <option>{t('serviceType')}</option>
+                      <option>{t('majorConstructions')}</option>
+                      <option>{t('painting')}</option>
+                      <option>{t('electrical')}</option>
+                      <option>{t('plumbing')}</option>
+                      <option>{t('carpentry')}</option>
+                      <option>{t('buildingMaintenance')}</option>
                       <option>أخرى</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      تفاصيل المشروع *
+                      {t('projectDetails')} *
                     </label>
                     <Textarea 
-                      placeholder="اكتب تفاصيل مشروعك أو الخدمة المطلوبة..."
+                      placeholder={t('projectDetails')}
                       rows={4}
                       className="w-full"
                     />
@@ -142,19 +145,19 @@ const Contact = () => {
                       variant="professional" 
                       size="lg" 
                       className="w-full py-4 text-base"
-                      onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود إرسال طلب للحصول على خدماتكم', '_blank')}
+                      onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to send a service request', '_blank')}
                     >
                       <Send className="h-5 w-5 ml-2" />
-                      إرسال الطلب
+                      {t('sendRequest')}
                     </Button>
                     <Button 
                       variant="outline" 
                       size="lg" 
                       className="w-full py-4 text-base"
-                      onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود التحدث معكم مباشرة', '_blank')}
+                      onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to speak with you directly', '_blank')}
                     >
                       <Phone className="h-5 w-5 ml-2" />
-                      اتصل بنا مباشرة
+                      {t('callDirectly')}
                     </Button>
                   </div>
                 </form>
@@ -188,16 +191,16 @@ const Contact = () => {
             {/* Emergency Contact */}
             <Card className="shadow-card bg-gradient-primary text-white border-0">
               <CardContent className="p-6 text-center">
-                <h4 className="font-bold text-lg mb-2">خدمة الطوارئ</h4>
-                <p className="text-blue-light mb-4">متوفرون لخدمتكم على مدار الساعة</p>
+                <h4 className="font-bold text-lg mb-2">{t('emergencyService')}</h4>
+                <p className="text-blue-light mb-4">{t('emergencyText')}</p>
                 <Button 
                   variant="hero" 
                   size="lg" 
                   className="w-full"
-                  onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، لدي طارئ وأحتاج لخدماتكم فوراً', '_blank')}
+                  onClick={() => window.open('https://wa.me/971507323644?text=Hello, I have an emergency and need your services immediately', '_blank')}
                 >
                   <Phone className="h-5 w-5 ml-2" />
-                  اتصال طارئ
+                  {t('emergencyCall')}
                 </Button>
               </CardContent>
             </Card>
@@ -206,7 +209,7 @@ const Contact = () => {
             <Card className="shadow-card bg-white border-0">
               <CardHeader>
                 <CardTitle className="text-lg font-bold text-foreground">
-                  مناطق الخدمة
+                  {t('serviceAreas')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -225,14 +228,14 @@ const Contact = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Shield className="h-6 w-6 text-green-600" />
-                  <span className="font-semibold text-foreground">مرخص ومؤمن</span>
+                  <span className="font-semibold text-foreground">{t('licensedInsuredFull')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Award className="h-6 w-6 text-blue-primary" />
-                  <span className="font-semibold text-foreground">معتمد ومعترف</span>
+                  <span className="font-semibold text-foreground">{t('certifiedRecognized')}</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-3">
-                  رخصة #1478322 من دائرة التنمية الاقتصادية - دبي
+                  {t('licenseText')}
                 </p>
               </CardContent>
             </Card>
@@ -243,27 +246,27 @@ const Contact = () => {
         <div className="mt-16 text-center">
           <div className="bg-white rounded-2xl shadow-professional p-12">
             <h3 className="text-3xl font-bold text-foreground mb-4">
-              جاهزون لبدء مشروعك؟
+              {t('readyToStart')}
             </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              تواصل معنا اليوم واحصل على استشارة مجانية وعرض سعر مفصل لمشروعك
+              {t('ctaDescription')}
             </p>
             <div className="flex flex-col gap-4 justify-center max-w-md mx-auto sm:max-w-none sm:mx-0 sm:flex-row">
               <Button 
                 variant="professional" 
                 size="lg" 
                 className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto"
-                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود الحصول على عرض سعر مجاني لمشروعي', '_blank')}
+                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to get a free quote for my project', '_blank')}
               >
-                احصل على عرض سعر مجاني
+                {t('getFreeQuote')}
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto"
-                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود حجز موعد استشارة', '_blank')}
+                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to schedule a consultation', '_blank')}
               >
-                حدد موعد استشارة
+                {t('scheduleConsultation')}
               </Button>
             </div>
           </div>
