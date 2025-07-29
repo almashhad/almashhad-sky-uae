@@ -1,44 +1,57 @@
-name: Build and Deploy
+name: تجهيز الموقع لاستضافة Hostinger
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-and-prepare:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - name: تحميل الكود
+      uses: actions/checkout@v4
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    - name: إعداد Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '20'
         cache: 'npm'
         
-    - name: Install dependencies
+    - name: تنصيب المكتبات
       run: npm ci
       
-    - name: Build project
+    - name: بناء المشروع
       run: npm run build
       
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: dist-files
-        path: dist/
-        
-    - name: Create release zip
+    - name: إعداد ملفات Hostinger
       run: |
-        cd dist
-        zip -r ../hostinger-ready.zip .
+        # نسخ ملف .htaccess إلى مجلد البناء
+        cp public/.htaccess dist/
         
-    - name: Upload release
-      uses: actions/upload-artifact@v3
+        # التأكد من وجود ملف index.html
+        ls -la dist/
+        
+        # إنشاء ملف zip للاستضافة
+        cd dist
+        zip -r ../almashhadsky-hostinger.zip .
+        cd ..
+        
+        # عرض محتويات الملف المضغوط
+        echo "محتويات الملف المضغوط:"
+        unzip -l almashhadsky-hostinger.zip | head -20
+        
+    - name: رفع ملف الاستضافة
+      uses: actions/upload-artifact@v4
       with:
-        name: hostinger-ready
-        path: hostinger-ready.zip
+        name: almashhadsky-hostinger
+        path: almashhadsky-hostinger.zip
+        retention-days: 30
+        
+    - name: رفع مجلد البناء الكامل
+      uses: actions/upload-artifact@v4
+      with:
+        name: dist-folder
+        path: dist/
+        retention-days: 30
