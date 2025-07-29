@@ -18,7 +18,7 @@ import {
 import { useTranslation } from "@/hooks/useTranslation";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   
   const services = [
     { name: t('majorConstructions'), icon: Building },
@@ -36,8 +36,13 @@ const Footer = () => {
   ];
 
   const serviceAreas = [
-    "أبوظبي", "دبي", "الشارقة", "عجمان",
-    "أم القيوين", "رأس الخيمة", "الفجيرة"
+    { ar: "أبوظبي", en: "Abu Dhabi" },
+    { ar: "دبي", en: "Dubai" }, 
+    { ar: "الشارقة", en: "Sharjah" },
+    { ar: "عجمان", en: "Ajman" },
+    { ar: "أم القيوين", en: "Umm Al Quwain" },
+    { ar: "رأس الخيمة", en: "Ras Al Khaimah" },
+    { ar: "الفجيرة", en: "Fujairah" }
   ];
 
   const socialMedia = [
@@ -180,7 +185,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 gap-2 mb-6">
               {serviceAreas.map((area, index) => (
                 <Badge key={index} variant="secondary" className="bg-white/10 text-white border-white/20 hover:bg-white/20 justify-center py-2">
-                  {area}
+                  {language === 'ar' ? area.ar : area.en}
                 </Badge>
               ))}
             </div>
