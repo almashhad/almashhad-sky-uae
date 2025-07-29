@@ -59,19 +59,19 @@ const Hero = () => {
           {/* Enhanced Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
             <div className="text-center bg-gradient-glass backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:shadow-glow transition-all duration-300">
-              <div className="text-3xl sm:text-4xl font-black text-gold-accent">+500</div>
+              <div className="text-3xl sm:text-4xl font-black text-gold-accent">العديد من</div>
               <div className="text-sm sm:text-base text-white/90 font-semibold">{t('projectsCompleted')}</div>
             </div>
             <div className="text-center bg-gradient-glass backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:shadow-glow transition-all duration-300">
-              <div className="text-3xl sm:text-4xl font-black text-gold-accent">+10</div>
+              <div className="text-3xl sm:text-4xl font-black text-gold-accent">سنوات</div>
               <div className="text-sm sm:text-base text-white/90 font-semibold">{t('yearsExperience')}</div>
             </div>
             <div className="text-center bg-gradient-glass backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:shadow-glow transition-all duration-300">
-              <div className="text-3xl sm:text-4xl font-black text-gold-accent">7</div>
+              <div className="text-3xl sm:text-4xl font-black text-gold-accent">جميع</div>
               <div className="text-sm sm:text-base text-white/90 font-semibold">{t('emiratesServed')}</div>
             </div>
             <div className="text-center bg-gradient-glass backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:shadow-glow transition-all duration-300">
-              <div className="text-3xl sm:text-4xl font-black text-gold-accent">%99</div>
+              <div className="text-3xl sm:text-4xl font-black text-gold-accent">عالي</div>
               <div className="text-sm sm:text-base text-white/90 font-semibold">{t('customerSatisfaction')}</div>
             </div>
           </div>
