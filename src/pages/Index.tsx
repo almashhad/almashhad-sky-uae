@@ -6,6 +6,7 @@ import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LanguageSelector from "@/components/LanguageSelector";
+import LanguageToggle from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
@@ -18,6 +19,7 @@ const Index = () => {
   return (
     <div className="min-h-screen" dir={dir}>
       <LanguageSelector onLanguageSelect={handleLanguageSelect} />
+      <LanguageToggle />
       <Header />
       <Hero />
       <Services />
