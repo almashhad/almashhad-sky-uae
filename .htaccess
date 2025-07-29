@@ -1,0 +1,55 @@
+RewriteEngine On
+
+# إجبار HTTPS للأمان
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# توحيد الدومين (إزالة www)
+RewriteCond %{HTTP_HOST} ^www\.almashhadsky\.com [NC]
+RewriteRule ^(.*)$ https://almashhadsky.com/$1 [L,R=301]
+
+# دعم React Router - توجيه جميع الطلبات إلى index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# ضغط الملفات لتسريع التحميل
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# تخزين مؤقت للملفات الثابتة
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# حماية إضافية
+<Files ".htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# منع الوصول لملفات النظام
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
