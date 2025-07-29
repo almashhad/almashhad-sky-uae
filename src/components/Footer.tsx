@@ -11,8 +11,10 @@ import {
   Wrench,
   ExternalLink
 } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const services = [
     { name: "البناء والإنشاء", icon: Building },
     { name: "الطلاء والديكور", icon: Paintbrush },

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Globe, X } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface LanguageSelectorProps {
   onLanguageSelect: (language: 'ar' | 'en') => void;
@@ -9,6 +10,7 @@ interface LanguageSelectorProps {
 
 const LanguageSelector = ({ onLanguageSelect }: LanguageSelectorProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Check if user has already selected a language
@@ -52,10 +54,10 @@ const LanguageSelector = ({ onLanguageSelect }: LanguageSelectorProps) => {
               <Globe className="h-8 w-8 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-premium-gray mb-2">
-              اختر لغتك المفضلة
+              {t('chooseLanguage')}
             </h2>
             <p className="text-muted-foreground text-sm">
-              Choose Your Preferred Language
+              {t('chooseLanguageSubtitle')}
             </p>
           </div>
 
@@ -71,8 +73,8 @@ const LanguageSelector = ({ onLanguageSelect }: LanguageSelectorProps) => {
               <div className="flex items-center gap-4 relative z-10">
                 <div className="text-3xl">🇦🇪</div>
                 <div className="text-right">
-                  <div className="font-bold text-lg text-premium-gray">العربية</div>
-                  <div className="text-sm text-muted-foreground">اللغة العربية</div>
+                  <div className="font-bold text-lg text-premium-gray">{t('arabic')}</div>
+                  <div className="text-sm text-muted-foreground">{t('arabicLang')}</div>
                 </div>
               </div>
             </Button>
@@ -87,8 +89,8 @@ const LanguageSelector = ({ onLanguageSelect }: LanguageSelectorProps) => {
               <div className="flex items-center gap-4 relative z-10">
                 <div className="text-3xl">🇺🇸</div>
                 <div className="text-left">
-                  <div className="font-bold text-lg text-premium-gray">English</div>
-                  <div className="text-sm text-muted-foreground">English Language</div>
+                  <div className="font-bold text-lg text-premium-gray">{t('english')}</div>
+                  <div className="text-sm text-muted-foreground">{t('englishLang')}</div>
                 </div>
               </div>
             </Button>
@@ -97,7 +99,7 @@ const LanguageSelector = ({ onLanguageSelect }: LanguageSelectorProps) => {
           {/* Footer */}
           <div className="bg-gradient-to-r from-blue-light/30 to-primary/10 px-8 py-4 rounded-b-3xl">
             <p className="text-xs text-muted-foreground text-center">
-              يمكنك تغيير اللغة في أي وقت • You can change the language anytime
+              {t('languageNote')}
             </p>
           </div>
         </div>

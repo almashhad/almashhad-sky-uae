@@ -1,4 +1,7 @@
+import { useTranslation } from "@/hooks/useTranslation";
+
 const Team = () => {
+  const { t } = useTranslation();
   const teamImages = [
     "/lovable-uploads/deaa5756-eff0-478e-b762-fd451fa29b69.png",
     "/lovable-uploads/7e45055c-2380-41e6-86e0-b4a54aac7f97.png", 
@@ -21,10 +24,10 @@ const Team = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-            فريق العمل
+            {t('ourTeam')}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            فريقنا المحترف
+            {t('ourTeam')}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             نعمل مع فريق متخصص ومدرب لضمان تنفيذ مشاريعكم بأعلى معايير الجودة

@@ -6,15 +6,17 @@ import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LanguageSelector from "@/components/LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { setLanguage, dir } = useLanguage();
+  
   const handleLanguageSelect = (language: 'ar' | 'en') => {
-    console.log('Selected language:', language);
-    // TODO: Implement language switching logic
+    setLanguage(language);
   };
 
   return (
-    <div className="min-h-screen" dir="rtl">
+    <div className="min-h-screen" dir={dir}>
       <LanguageSelector onLanguageSelect={handleLanguageSelect} />
       <Header />
       <Hero />

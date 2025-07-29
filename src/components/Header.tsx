@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Menu } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <header className="bg-white shadow-card sticky top-0 z-50">
@@ -23,7 +25,7 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-1">
               <MapPin className="h-4 w-4 flex-shrink-0" />
-              <span className="text-xs sm:text-sm text-center">جميع إمارات دولة الإمارات العربية المتحدة</span>
+              <span className="text-xs sm:text-sm text-center">{t('allEmirates')}</span>
             </div>
           </div>
         </div>
@@ -44,29 +46,29 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors">
-              الرئيسية
+              {t('home')}
             </a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors">
-              من نحن
+              {t('about')}
             </a>
             <a href="#services" className="text-foreground hover:text-primary transition-colors">
-              خدماتنا
+              {t('services')}
             </a>
             <a href="#projects" className="text-foreground hover:text-primary transition-colors">
-              مشاريعنا
+              {t('projects')}
             </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-              اتصل بنا
+              {t('contact')}
             </a>
           </nav>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="outline" size="sm">
-              طلب عرض سعر
+              {t('getQuote')}
             </Button>
             <Button variant="professional" size="sm">
-              استشارة مجانية
+              {t('freeConsultation')}
             </Button>
           </div>
 
@@ -90,42 +92,42 @@ const Header = () => {
                 className="text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-primary/5 text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                الرئيسية
+                {t('home')}
               </a>
               <a 
                 href="#about" 
                 className="text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-primary/5 text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                من نحن
+                {t('about')}
               </a>
               <a 
                 href="#services" 
                 className="text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-primary/5 text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                خدماتنا
+                {t('services')}
               </a>
               <a 
                 href="#projects" 
                 className="text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-primary/5 text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                مشاريعنا
+                {t('projects')}
               </a>
               <a 
                 href="#contact" 
                 className="text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-primary/5 text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                اتصل بنا
+                {t('contact')}
               </a>
               <div className="flex flex-col gap-3 mt-6 pt-4 border-t">
                 <Button variant="outline" size="lg" className="w-full py-4 text-base">
-                  طلب عرض سعر
+                  {t('getQuote')}
                 </Button>
                 <Button variant="professional" size="lg" className="w-full py-4 text-base">
-                  استشارة مجانية
+                  {t('freeConsultation')}
                 </Button>
               </div>
             </div>
