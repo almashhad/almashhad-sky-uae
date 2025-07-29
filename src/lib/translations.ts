@@ -1,5 +1,7 @@
 export const translations = {
   ar: {
+    // Site Title
+    siteTitle: "المشهد سكاي",
     // Header
     home: "الرئيسية",
     about: "من نحن",
@@ -223,6 +225,8 @@ export const translations = {
   },
   
   en: {
+    // Site Title
+    siteTitle: "Almashhad Sky",
     // Header
     home: "Home",
     about: "About Us",
