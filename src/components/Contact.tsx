@@ -46,8 +46,8 @@ const Contact = () => {
   ];
 
   const serviceAreas = [
-    "أبوظبي", "دبي", "الشارقة", "عجمان", 
-    "أم القيوين", "رأس الخيمة", "الفجيرة"
+    t('abuDhabi'), t('dubai'), t('sharjah'), t('ajman'), 
+    t('ummAlQuwain'), t('rasAlKhaimah'), t('fujairah')
   ];
 
   return (
@@ -125,7 +125,7 @@ const Contact = () => {
                       <option>{t('plumbing')}</option>
                       <option>{t('carpentry')}</option>
                       <option>{t('buildingMaintenance')}</option>
-                      <option>أخرى</option>
+                      <option>{t('other')}</option>
                     </select>
                   </div>
 

@@ -208,7 +208,17 @@ export const translations = {
     tiktok: "تيك توك", 
     youtube: "يوتيوب",
     twitter: "تويتر",
-    pinterest: "بنترست"
+    pinterest: "بنترست",
+    
+    // Service Areas & Others
+    other: "أخرى",
+    abuDhabi: "أبوظبي",
+    dubai: "دبي", 
+    sharjah: "الشارقة",
+    ajman: "عجمان",
+    ummAlQuwain: "أم القيوين",
+    rasAlKhaimah: "رأس الخيمة",
+    fujairah: "الفجيرة"
   },
   
   en: {
@@ -420,6 +430,16 @@ export const translations = {
     tiktok: "TikTok",
     youtube: "YouTube", 
     twitter: "Twitter",
-    pinterest: "Pinterest"
+    pinterest: "Pinterest",
+    
+    // Service Areas & Others
+    other: "Other",
+    abuDhabi: "Abu Dhabi",
+    dubai: "Dubai",
+    sharjah: "Sharjah", 
+    ajman: "Ajman",
+    ummAlQuwain: "Umm Al Quwain",
+    rasAlKhaimah: "Ras Al Khaimah",
+    fujairah: "Fujairah"
   }
 };
