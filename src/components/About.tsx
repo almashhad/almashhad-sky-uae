@@ -151,7 +151,7 @@ const About = () => {
                 {t('licenseText')}
               </h4>
               <p className="text-gold-accent">
-                شركة معتمدة ومرخصة رسمياً لضمان أعلى معايير الجودة والثقة
+                {t('certifiedCompany')}
               </p>
             </CardContent>
           </Card>

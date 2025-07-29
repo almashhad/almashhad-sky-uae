@@ -190,6 +190,7 @@ export const translations = {
     allRightsReserved: "© 2024 المشهد سكاي للخدمات الفنية. جميع الحقوق محفوظة.",
     economicDepartment: "دائرة التنمية الاقتصادية - دبي",
     licenseNumber: "رخصة #1478322",
+    certifiedCompany: "شركة معتمدة ومرخصة رسمياً لضمان أعلى معايير الجودة والثقة",
     
     // Language Selector
     chooseLanguage: "اختر لغتك المفضلة",
@@ -401,6 +402,7 @@ export const translations = {
     allRightsReserved: "© 2024 Almashhad Sky Technical Services. All rights reserved.",
     economicDepartment: "Economic Development Department - Dubai",
     licenseNumber: "License #1478322",
+    certifiedCompany: "A certified and officially licensed company to ensure the highest standards of quality and trust",
     
     // Language Selector
     chooseLanguage: "Choose Your Preferred Language",
