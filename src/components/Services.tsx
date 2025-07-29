@@ -24,26 +24,29 @@ import {
   MoreHorizontal
 } from "lucide-react";
 import servicesImage from "/lovable-uploads/86d97892-3432-4ede-85a9-e2c17de16293.png";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Services = () => {
+  const { t } = useTranslation();
+
   const mainServices = [
     {
-      title: "أعمال الدهانات والصباغة",
+      title: t('painting'),
       icon: Brush,
       color: "bg-blue-primary",
-      description: "دهانات داخلية وخارجية بأحدث التقنيات",
+      description: t('paintingDesc'),
       services: [
         "دهانات مقاومة للرطوبة",
-        "دهانات ديكورية",
+        "دهانات ديكورية", 
         "طلاء الخشب والمعادن",
         "دهانات مضادة للحريق"
       ]
     },
     {
-      title: "أعمال البلاط والسيراميك",
+      title: t('tiles'),
       icon: Grid3X3,
       color: "bg-blue-secondary",
-      description: "تركيب جميع أنواع البلاط والسيراميك",
+      description: t('tilesDesc'),
       services: [
         "بورسلين ورخام",
         "سيراميك للحمامات",
@@ -52,10 +55,10 @@ const Services = () => {
       ]
     },
     {
-      title: "التمديدات الكهربائية",
+      title: t('electrical'),
       icon: Zap,
       color: "bg-gradient-primary",
-      description: "تمديدات كهربائية آمنة ومعتمدة",
+      description: t('electricalDesc'),
       services: [
         "تمديدات المنازل",
         "إضاءة ديكورية",
@@ -64,10 +67,10 @@ const Services = () => {
       ]
     },
     {
-      title: "السباكة والصحي",
+      title: t('plumbing'),
       icon: ShowerHead,
       color: "bg-blue-dark",
-      description: "تركيب وصيانة الأدوات الصحية",
+      description: t('plumbingDesc'),
       services: [
         "تمديدات المياه",
         "أدوات صحية",
@@ -76,10 +79,10 @@ const Services = () => {
       ]
     },
     {
-      title: "النجارة والخشب",
+      title: t('carpentry'),
       icon: TreePine,
       color: "bg-blue-primary",
-      description: "أعمال النجارة والأرضيات الخشبية",
+      description: t('carpentryDesc'),
       services: [
         "أرضيات باركيه",
         "نجارة مخصصة",
@@ -88,10 +91,10 @@ const Services = () => {
       ]
     },
     {
-      title: "أعمال الديكور",
+      title: t('decoration'),
       icon: Sofa,
       color: "bg-blue-secondary",
-      description: "تصميم وتنفيذ الديكور الداخلي",
+      description: t('decorationDesc'),
       services: [
         "تصميم مخصص",
         "ورق جدران",
@@ -102,10 +105,10 @@ const Services = () => {
   ];
 
   const additionalServices = [
-    { name: "صيانة المباني", icon: Settings, desc: "صيانة شاملة لجميع أنواع المباني" },
-    { name: "أعمال الخرسانة", icon: Building, desc: "صب وتشكيل الخرسانة المسلحة" },
-    { name: "هدم ورفع النقاض", icon: Drill, desc: "هدم آمن وإزالة المخلفات" },
-    { name: "صيانة أحواض السباحة", icon: Waves, desc: "تنظيف وصيانة شاملة للمسابح" }
+    { name: t('buildingMaintenance'), icon: Settings, desc: "صيانة شاملة لجميع أنواع المباني" },
+    { name: t('concreteWork'), icon: Building, desc: "صب وتشكيل الخرسانة المسلحة" },
+    { name: t('demolition'), icon: Drill, desc: "هدم آمن وإزالة المخلفات" },
+    { name: t('poolMaintenance'), icon: Waves, desc: "تنظيف وصيانة شاملة للمسابح" }
   ];
 
   return (
@@ -114,22 +117,22 @@ const Services = () => {
         {/* Section Header with Slogan */}
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-blue-primary text-white text-sm sm:text-base px-4 py-2">
-            خدماتنا الشاملة
+            {t('ourServices')}
           </Badge>
           
           {/* Main Slogan */}
           <div className="mb-8">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-primary to-blue-secondary bg-clip-text text-transparent mb-4">
-              نبني ما تتخيله
+              {t('buildWhatYouImagine')}
             </h1>
             <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6">
-            خدماتنا الشاملة
+            {t('ourServices')}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
-            نقدم مجموعة متكاملة من الخدمات الفنية والمقاولات لتلبية جميع احتياجاتك بأعلى معايير الجودة والاحترافية
+            {t('servicesDescription')}
           </p>
         </div>
 
@@ -166,10 +169,10 @@ const Services = () => {
         <div className="bg-white rounded-2xl shadow-professional p-6 sm:p-8 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-              خدمات إضافية
+              {t('additionalServices')}
             </h3>
             <p className="text-muted-foreground">
-              خدمات متخصصة أخرى نقدمها لعملائنا الكرام
+              {t('additionalServicesDesc')}
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -190,17 +193,17 @@ const Services = () => {
           <div className="order-2 lg:order-1">
             <img 
               src={servicesImage} 
-              alt="خدماتنا المتخصصة - نبني ما تتخيله" 
+              alt={t('buildWhatYouImagine')} 
               className="rounded-2xl shadow-professional w-full h-auto object-cover max-h-[400px] sm:max-h-[500px] lg:max-h-[600px]"
             />
           </div>
           <div className="order-1 lg:order-2">
             <div className="mb-6">
               <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-                لماذا تختار المشهد سكاي؟
+                {t('whyChooseUs')}
               </h3>
               <p className="text-lg font-semibold text-blue-primary">
-                نبني ما تتخيله
+                {t('buildWhatYouImagine')}
               </p>
             </div>
             <div className="space-y-4 mb-8">
@@ -208,37 +211,37 @@ const Services = () => {
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm">✓</span>
                 </div>
-                <span className="text-foreground text-sm sm:text-base">فريق من المتخصصين المعتمدين</span>
+                <span className="text-foreground text-sm sm:text-base">{t('certifiedTeam')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm">✓</span>
                 </div>
-                <span className="text-foreground text-sm sm:text-base">ضمان الجودة على جميع الأعمال</span>
+                <span className="text-foreground text-sm sm:text-base">{t('qualityGuarantee')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm">✓</span>
                 </div>
-                <span className="text-foreground text-sm sm:text-base">أسعار تنافسية ومدروسة</span>
+                <span className="text-foreground text-sm sm:text-base">{t('competitivePrices')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm">✓</span>
                 </div>
-                <span className="text-foreground text-sm sm:text-base">خدمة عملاء متميزة 24/7</span>
+                <span className="text-foreground text-sm sm:text-base">{t('customerService')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm">✓</span>
                 </div>
-                <span className="text-foreground text-sm sm:text-base">التزام بالمواعيد المحددة</span>
+                <span className="text-foreground text-sm sm:text-base">{t('onTimeDelivery')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm">✓</span>
                 </div>
-                <span className="text-foreground text-sm sm:text-base">ضمان ما بعد التنفيذ</span>
+                <span className="text-foreground text-sm sm:text-base">{t('afterServiceGuarantee')}</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto lg:max-w-none lg:mx-0">
@@ -246,17 +249,17 @@ const Services = () => {
                 variant="professional" 
                 size="lg" 
                 className="w-full sm:w-auto py-3 sm:py-4 text-sm sm:text-base"
-                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود الحصول على استشارة مجانية', '_blank')}
+                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to get a free consultation', '_blank')}
               >
-                احصل على استشارة مجانية
+                {t('getFreeConsultation')}
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="w-full sm:w-auto py-3 sm:py-4 text-sm sm:text-base"
-                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود طلب عرض سعر مفصل', '_blank')}
+                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to request a detailed quote', '_blank')}
               >
-                اطلب عرض سعر
+                {t('getQuote')}
               </Button>
             </div>
           </div>

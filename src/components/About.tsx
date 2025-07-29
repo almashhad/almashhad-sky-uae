@@ -12,24 +12,27 @@ import {
   Target
 } from "lucide-react";
 import companyImage from "@/assets/company-building.jpg";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const About = () => {
+  const { t } = useTranslation();
+
   const achievements = [
-    { number: "500+", label: "مشروع مكتمل بنجاح", icon: Star },
-    { number: "10+", label: "سنوات من الخبرة", icon: Award },
-    { number: "100%", label: "رضا العملاء", icon: CheckCircle },
+    { number: "500+", label: t('projectsCompleted'), icon: Star },
+    { number: "10+", label: t('yearsExperience'), icon: Award },
+    { number: "100%", label: t('customerSatisfaction'), icon: CheckCircle },
     { number: "24/7", label: "دعم فني متواصل", icon: Clock }
   ];
 
   const features = [
     {
       icon: Shield,
-      title: "مرخص ومؤمن بالكامل",
+      title: t('licensedInsuredFull'),
       description: "شركة مرخصة من دائرة التنمية الاقتصادية بدبي ومؤمنة بالكامل لضمان أمان مشاريعكم"
     },
     {
       icon: Users,
-      title: "فريق من المختصين",
+      title: t('expertTeam'),
       description: "نخبة من المهندسين والفنيين المعتمدين ذوي الخبرة الواسعة في مجال الإنشاءات"
     },
     {
@@ -50,13 +53,13 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-gradient-primary text-white">
-            من نحن
+            {t('aboutUs')}
           </Badge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            🏗️ شركة المشهد سكاي للخدمات الفنية
+            🏗️ {t('companyTitle')}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-            نحن شركة مقاولات شاملة نقدم خدمات واسعة في جميع مجالات البناء والتشطيب.
+            {t('aboutDescription')}
           </p>
         </div>
 
@@ -66,10 +69,10 @@ const About = () => {
           <Card className="mb-8 bg-gradient-card border-0 shadow-glass">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-2">
-                💡 <span>فلسفتنا بسيطة:</span>
+                💡 <span>{t('ourPhilosophy')}</span>
               </h3>
               <p className="text-lg text-muted-foreground">
-                نحول تصوركم إلى واقع ملموس، مهما كان معقداً.
+                {t('philosophyText')}
               </p>
             </CardContent>
           </Card>
@@ -78,14 +81,14 @@ const About = () => {
           <Card className="mb-8 bg-gradient-card border-0 shadow-glass">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-                🎯 <span>خبرتنا تشمل:</span>
+                🎯 <span>{t('ourExpertise')}</span>
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center">
-                <Badge variant="secondary" className="py-2 px-4 text-sm">الإنشاءات الكبرى</Badge>
-                <Badge variant="secondary" className="py-2 px-4 text-sm">التشطيبات الفاخرة</Badge>
-                <Badge variant="secondary" className="py-2 px-4 text-sm">الأنظمة التقنية</Badge>
-                <Badge variant="secondary" className="py-2 px-4 text-sm">الأعمال الحرفية</Badge>
-                <Badge variant="secondary" className="py-2 px-4 text-sm">الديكور والتصميم</Badge>
+                <Badge variant="secondary" className="py-2 px-4 text-sm">{t('majorConstructions')}</Badge>
+                <Badge variant="secondary" className="py-2 px-4 text-sm">{t('luxuryFinishing')}</Badge>
+                <Badge variant="secondary" className="py-2 px-4 text-sm">{t('technicalSystems')}</Badge>
+                <Badge variant="secondary" className="py-2 px-4 text-sm">{t('craftwork')}</Badge>
+                <Badge variant="secondary" className="py-2 px-4 text-sm">{t('designDecoration')}</Badge>
               </div>
             </CardContent>
           </Card>
@@ -94,32 +97,32 @@ const About = () => {
           <Card className="mb-8 bg-gradient-card border-0 shadow-glass">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-                ⚡ <span>طريقة عملنا:</span>
+                ⚡ <span>{t('ourMethod')}</span>
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-2">
                     <Target className="h-6 w-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold">فهم رؤيتكم</span>
+                  <span className="text-sm font-semibold">{t('understandVision')}</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-2">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold">تخطيط دقيق</span>
+                  <span className="text-sm font-semibold">{t('precisePlanning')}</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-2">
                     <Users className="h-6 w-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold">تنفيذ متقن</span>
+                  <span className="text-sm font-semibold">{t('perfectExecution')}</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-2">
                     <CheckCircle className="h-6 w-6 text-white" />
                   </div>
-                  <span className="text-sm font-semibold">تسليم مثالي</span>
+                  <span className="text-sm font-semibold">{t('perfectDelivery')}</span>
                 </div>
               </div>
             </CardContent>
@@ -129,13 +132,13 @@ const About = () => {
           <Card className="mb-8 bg-gradient-card border-0 shadow-glass">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold text-gradient-primary mb-4">
-                🌟 شعارنا: "نبني ما تتخيله"
+                🌟 {t('ourMotto')}
               </h3>
               <p className="text-lg text-muted-foreground mb-4">
-                من الفكرة الأولى إلى اللمسة الأخيرة، نحن شريككم في تحويل الأحلام إلى مشاريع حقيقية.
+                {t('missionText')}
               </p>
               <p className="text-base text-foreground font-semibold">
-                🏆 لأننا نؤمن أن كل مشروع يستحق فريق متخصص يحقق أهدافه بجودة عالمية.
+                🏆 {t('beliefText')}
               </p>
             </CardContent>
           </Card>
@@ -145,7 +148,7 @@ const About = () => {
             <CardContent className="p-8 text-center">
               <h4 className="font-bold text-xl mb-4 flex items-center justify-center gap-2">
                 <Award className="h-6 w-6" />
-                مرخص من دائرة التنمية الاقتصادية - دبي #1478322
+                {t('licenseText')}
               </h4>
               <p className="text-gold-accent">
                 شركة معتمدة ومرخصة رسمياً لضمان أعلى معايير الجودة والثقة
@@ -196,20 +199,18 @@ const About = () => {
 
         {/* Mission & Vision */}
         <div className="bg-gradient-primary rounded-2xl p-12 text-white text-center">
-          <h3 className="text-3xl font-bold mb-8">رؤيتنا ورسالتنا</h3>
+          <h3 className="text-3xl font-bold mb-8">{t('visionMission')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h4 className="text-xl font-semibold mb-4">رؤيتنا</h4>
+              <h4 className="text-xl font-semibold mb-4">{t('ourVision')}</h4>
               <p className="text-blue-light leading-relaxed">
-                أن نكون الشركة الرائدة في مجال الخدمات الإنشائية والفنية في دولة الإمارات، 
-                ونقدم حلولاً مبتكرة تلبي احتياجات عملائنا وتتجاوز توقعاتهم.
+                {t('visionText')}
               </p>
             </div>
             <div>
-              <h4 className="text-xl font-semibold mb-4">رسالتنا</h4>
+              <h4 className="text-xl font-semibold mb-4">{t('ourMission')}</h4>
               <p className="text-blue-light leading-relaxed">
-                تقديم خدمات إنشائية وفنية متميزة بأعلى معايير الجودة والاحترافية، 
-                مع الالتزام بالمواعيد والشفافية في التعامل مع جميع عملائنا.
+                {t('missionFullText')}
               </p>
             </div>
           </div>
@@ -217,9 +218,9 @@ const About = () => {
             variant="hero" 
             size="lg" 
             className="mt-8 px-8 py-4 text-base w-full sm:w-auto"
-            onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود التواصل معكم اليوم', '_blank')}
+            onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to contact you today', '_blank')}
           >
-            تواصل معنا اليوم
+            {t('contactUsToday')}
           </Button>
         </div>
       </div>
