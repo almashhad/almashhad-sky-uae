@@ -25,7 +25,7 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-1">
               <MapPin className="h-4 w-4 flex-shrink-0" />
-              <span className="text-xs sm:text-sm text-center">{t('allEmirates')}</span>
+              <span className="text-xs sm:text-sm text-center">{t('emiratesService')}</span>
             </div>
           </div>
         </div>
