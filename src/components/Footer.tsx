@@ -173,7 +173,7 @@ const Footer = () => {
               variant="hero" 
               size="sm" 
               className="mt-6"
-              onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to see all your services', '_blank')}
+              onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أريد عرض جميع خدماتكم', '_blank')}
             >
               {t('viewAllServices')}
             </Button>
@@ -206,7 +206,7 @@ const Footer = () => {
               <Button 
                 variant="hero" 
                 size="lg"
-                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like a free consultation', '_blank')}
+                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أريد استشارة مجانية', '_blank')}
               >
                 {t('freeConsultation')}
               </Button>
@@ -214,7 +214,7 @@ const Footer = () => {
                 variant="outline" 
                 size="lg" 
                 className="border-white text-white hover:bg-white hover:text-blue-primary"
-                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to request a quote', '_blank')}
+                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أريد عرض سعر لمشروعي', '_blank')}
               >
                 {t('getQuote')}
               </Button>

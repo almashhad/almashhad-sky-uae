@@ -64,10 +64,18 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="outline" size="sm">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أريد الحصول على عرض سعر', '_blank')}
+            >
               {t('getQuote')}
             </Button>
-            <Button variant="professional" size="sm">
+            <Button 
+              variant="professional" 
+              size="sm"
+              onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أريد استشارة مجانية', '_blank')}
+            >
               {t('freeConsultation')}
             </Button>
           </div>
@@ -123,10 +131,20 @@ const Header = () => {
                 {t('contact')}
               </a>
               <div className="flex flex-col gap-3 mt-6 pt-4 border-t">
-                <Button variant="outline" size="lg" className="w-full py-4 text-base">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="w-full py-4 text-base"
+                  onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أريد الحصول على عرض سعر', '_blank')}
+                >
                   {t('getQuote')}
                 </Button>
-                <Button variant="professional" size="lg" className="w-full py-4 text-base">
+                <Button 
+                  variant="professional" 
+                  size="lg" 
+                  className="w-full py-4 text-base"
+                  onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أريد استشارة مجانية', '_blank')}
+                >
                   {t('freeConsultation')}
                 </Button>
               </div>

@@ -249,7 +249,7 @@ const Services = () => {
                 variant="professional" 
                 size="lg" 
                 className="w-full sm:w-auto py-3 sm:py-4 text-sm sm:text-base"
-                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to get a free consultation', '_blank')}
+                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أريد استشارة مجانية لخدماتكم', '_blank')}
               >
                 {t('getFreeConsultation')}
               </Button>
@@ -257,7 +257,7 @@ const Services = () => {
                 variant="outline" 
                 size="lg" 
                 className="w-full sm:w-auto py-3 sm:py-4 text-sm sm:text-base"
-                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to request a detailed quote', '_blank')}
+                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أريد عرض سعر مفصل لمشروعي', '_blank')}
               >
                 {t('getQuote')}
               </Button>
