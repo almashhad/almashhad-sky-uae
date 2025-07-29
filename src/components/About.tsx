@@ -28,22 +28,22 @@ const About = () => {
     {
       icon: Shield,
       title: t('licensedInsuredFull'),
-      description: "شركة مرخصة من دائرة التنمية الاقتصادية بدبي ومؤمنة بالكامل لضمان أمان مشاريعكم"
+      description: t('licensedInsuredDesc')
     },
     {
       icon: Users,
       title: t('expertTeam'),
-      description: "نخبة من المهندسين والفنيين المعتمدين ذوي الخبرة الواسعة في مجال الإنشاءات"
+      description: t('expertTeamDesc')
     },
     {
       icon: MapPin,
-      title: "تغطية شاملة",
-      description: "نخدم جميع إمارات دولة الإمارات العربية المتحدة بأعلى معايير الجودة"
+      title: t('fullCoverage'),
+      description: t('fullCoverageDesc')
     },
     {
       icon: Target,
-      title: "دقة في التنفيذ",
-      description: "نلتزم بالمواعيد المحددة ونضمن جودة التنفيذ وفقاً لأعلى المعايير العالمية"
+      title: t('preciseExecution'),
+      description: t('preciseExecutionDesc')
     }
   ];
 

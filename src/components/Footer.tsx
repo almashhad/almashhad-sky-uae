@@ -21,18 +21,18 @@ const Footer = () => {
   const { t } = useTranslation();
   
   const services = [
-    { name: "البناء والإنشاء", icon: Building },
-    { name: "الطلاء والديكور", icon: Paintbrush },
-    { name: "الخدمات الكهربائية", icon: Zap },
-    { name: "السباكة والصيانة", icon: Wrench }
+    { name: t('majorConstructions'), icon: Building },
+    { name: t('painting'), icon: Paintbrush },
+    { name: t('electrical'), icon: Zap },
+    { name: t('plumbing'), icon: Wrench }
   ];
 
   const quickLinks = [
-    "الرئيسية",
-    "من نحن", 
-    "خدماتنا",
-    "مشاريعنا",
-    "اتصل بنا"
+    { name: t('home'), href: "#home" },
+    { name: t('about'), href: "#about" },
+    { name: t('services'), href: "#services" },
+    { name: t('projects'), href: "#projects" },
+    { name: t('contact'), href: "#contact" }
   ];
 
   const serviceAreas = [
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
             
             <p className="text-blue-light mb-6 leading-relaxed">
-              شركة رائدة في مجال المقاولات العامة والخدمات الفنية المتخصصة في دولة الإمارات العربية المتحدة.
+              {t('footerDescription')}
             </p>
 
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
@@ -137,16 +137,16 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-bold mb-6">روابط سريعة</h4>
+            <h4 className="text-xl font-bold mb-6">{t('quickLinks')}</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <a 
-                    href={`#${link.toLowerCase().replace(' ', '-')}`}
+                    href={link.href}
                     className="text-blue-light hover:text-white transition-colors flex items-center group"
                   >
                     <ExternalLink className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link}
+                    {link.name}
                   </a>
                 </li>
               ))}
@@ -155,7 +155,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-xl font-bold mb-6">خدماتنا الرئيسية</h4>
+            <h4 className="text-xl font-bold mb-6">{t('mainServices')}</h4>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index} className="flex items-center gap-3 text-blue-light">
@@ -170,7 +170,7 @@ const Footer = () => {
               className="mt-6"
               onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to see all your services', '_blank')}
             >
-              عرض جميع الخدمات
+              {t('viewAllServices')}
             </Button>
           </div>
 
@@ -185,7 +185,7 @@ const Footer = () => {
               ))}
             </div>
             <p className="text-blue-light text-sm">
-              نخدم جميع إمارات دولة الإمارات بأعلى معايير الجودة والاحترافية
+              {t('qualityCommitment')}
             </p>
           </div>
         </div>
@@ -223,12 +223,12 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-blue-light text-sm">
-              © 2024 المشهد سكاي للخدمات الفنية. جميع الحقوق محفوظة.
+              {t('allRightsReserved')}
             </div>
             <div className="flex items-center gap-4 text-blue-light text-sm">
               <span>رخصة #1478322</span>
               <span>•</span>
-              <span>دائرة التنمية الاقتصادية - دبي</span>
+              <span>{t('economicDepartment')}</span>
             </div>
           </div>
         </div>

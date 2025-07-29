@@ -31,7 +31,7 @@ const Team = () => {
             {t('ourTeam')}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            نعمل مع فريق متخصص ومدرب لضمان تنفيذ مشاريعكم بأعلى معايير الجودة
+            {t('teamDescription')}
           </p>
         </div>
 
@@ -56,8 +56,7 @@ const Team = () => {
         {/* رسالة ختامية */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            فريق عمل مؤهل ومتخصص في جميع مجالات البناء والخدمات الفنية، 
-            نلتزم بتقديم أفضل الخدمات وفقاً لأعلى المعايير المهنية
+            {t('teamConclusion')}
           </p>
         </div>
       </div>

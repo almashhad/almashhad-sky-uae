@@ -36,10 +36,10 @@ const Services = () => {
       color: "bg-blue-primary",
       description: t('paintingDesc'),
       services: [
-        "دهانات مقاومة للرطوبة",
-        "دهانات ديكورية", 
-        "طلاء الخشب والمعادن",
-        "دهانات مضادة للحريق"
+        t('paintingService1'),
+        t('paintingService2'),
+        t('paintingService3'),
+        t('paintingService4')
       ]
     },
     {
@@ -48,10 +48,10 @@ const Services = () => {
       color: "bg-blue-secondary",
       description: t('tilesDesc'),
       services: [
-        "بورسلين ورخام",
-        "سيراميك للحمامات",
-        "بلاط للأرضيات",
-        "موزاييك وحجر طبيعي"
+        t('tilesService1'),
+        t('tilesService2'),
+        t('tilesService3'),
+        t('tilesService4')
       ]
     },
     {
@@ -60,10 +60,10 @@ const Services = () => {
       color: "bg-gradient-primary",
       description: t('electricalDesc'),
       services: [
-        "تمديدات المنازل",
-        "إضاءة ديكورية",
-        "صيانة كهربائية",
-        "أنظمة الأمان والإنذار"
+        t('electricalService1'),
+        t('electricalService2'),
+        t('electricalService3'),
+        t('electricalService4')
       ]
     },
     {
@@ -72,10 +72,10 @@ const Services = () => {
       color: "bg-blue-dark",
       description: t('plumbingDesc'),
       services: [
-        "تمديدات المياه",
-        "أدوات صحية",
-        "صيانة شاملة",
-        "حل مشاكل التسريبات"
+        t('plumbingService1'),
+        t('plumbingService2'),
+        t('plumbingService3'),
+        t('plumbingService4')
       ]
     },
     {
@@ -84,10 +84,10 @@ const Services = () => {
       color: "bg-blue-primary",
       description: t('carpentryDesc'),
       services: [
-        "أرضيات باركيه",
-        "نجارة مخصصة",
-        "صيانة الخشب",
-        "خزائن ومطابخ"
+        t('carpentryService1'),
+        t('carpentryService2'),
+        t('carpentryService3'),
+        t('carpentryService4')
       ]
     },
     {
@@ -96,19 +96,19 @@ const Services = () => {
       color: "bg-blue-secondary",
       description: t('decorationDesc'),
       services: [
-        "تصميم مخصص",
-        "ورق جدران",
-        "نقش وزخرفة",
-        "إضاءة ديكورية"
+        t('decorationService1'),
+        t('decorationService2'),
+        t('decorationService3'),
+        t('decorationService4')
       ]
     }
   ];
 
   const additionalServices = [
-    { name: t('buildingMaintenance'), icon: Settings, desc: "صيانة شاملة لجميع أنواع المباني" },
-    { name: t('concreteWork'), icon: Building, desc: "صب وتشكيل الخرسانة المسلحة" },
-    { name: t('demolition'), icon: Drill, desc: "هدم آمن وإزالة المخلفات" },
-    { name: t('poolMaintenance'), icon: Waves, desc: "تنظيف وصيانة شاملة للمسابح" }
+    { name: t('buildingMaintenance'), icon: Settings, desc: t('buildingMaintenanceDesc') },
+    { name: t('concreteWork'), icon: Building, desc: t('concreteWorkDesc') },
+    { name: t('demolition'), icon: Drill, desc: t('demolitionDesc') },
+    { name: t('poolMaintenance'), icon: Waves, desc: t('poolMaintenanceDesc') }
   ];
 
   return (
