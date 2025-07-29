@@ -9,12 +9,17 @@ import {
   Paintbrush,
   Zap,
   Wrench,
-  ExternalLink
+  ExternalLink,
+  Instagram,
+  Twitter,
+  Youtube,
+  Palette
 } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const Footer = () => {
   const { t } = useTranslation();
+  
   const services = [
     { name: "البناء والإنشاء", icon: Building },
     { name: "الطلاء والديكور", icon: Paintbrush },
@@ -33,6 +38,39 @@ const Footer = () => {
   const serviceAreas = [
     "أبوظبي", "دبي", "الشارقة", "عجمان",
     "أم القيوين", "رأس الخيمة", "الفجيرة"
+  ];
+
+  const socialMedia = [
+    { 
+      name: t('instagram'), 
+      icon: Instagram, 
+      url: "https://www.instagram.com/almashhadsky?igsh=MWlzMGc2azBqc3Iyeg==",
+      color: "hover:text-pink-500" 
+    },
+    { 
+      name: t('tiktok'), 
+      icon: Palette, 
+      url: "https://www.tiktok.com/@almashhadsky",
+      color: "hover:text-black" 
+    },
+    { 
+      name: t('youtube'), 
+      icon: Youtube, 
+      url: "https://www.youtube.com/@almashhadsky/shorts",
+      color: "hover:text-red-500" 
+    },
+    { 
+      name: t('twitter'), 
+      icon: Twitter, 
+      url: "https://x.com/almashhadsky",
+      color: "hover:text-blue-400" 
+    },
+    { 
+      name: t('pinterest'), 
+      icon: ExternalLink, 
+      url: "https://www.pinterest.com/almashhadsky/_profile/",
+      color: "hover:text-red-600" 
+    }
   ];
 
   return (
@@ -56,10 +94,10 @@ const Footer = () => {
 
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
               <Award className="h-4 w-4 ml-2" />
-              مرخص #1478322
+              {t('licenseText')}
             </Badge>
 
-            <div className="space-y-3">
+            <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-blue-light" />
                 <span dir="ltr">+971 50 732 3644</span>
@@ -70,8 +108,30 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-blue-light" />
-                <span>جميع إمارات دولة الإمارات</span>
+                <span>{t('allEmirates')}</span>
               </div>
+            </div>
+
+            {/* Social Media Section */}
+            <div>
+              <h5 className="text-sm font-semibold mb-4">{t('followUs')}</h5>
+              <div className="flex items-center gap-3 flex-wrap">
+                {socialMedia.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 bg-white/10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:scale-110 ${social.color}`}
+                    title={social.name}
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
+              <p className="text-blue-light text-xs mt-3">
+                {t('socialMediaText')}
+              </p>
             </div>
           </div>
 
@@ -104,14 +164,19 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <Button variant="hero" size="sm" className="mt-6">
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="mt-6"
+              onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to see all your services', '_blank')}
+            >
               عرض جميع الخدمات
             </Button>
           </div>
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-xl font-bold mb-6">مناطق الخدمة</h4>
+            <h4 className="text-xl font-bold mb-6">{t('serviceAreas')}</h4>
             <div className="grid grid-cols-2 gap-2 mb-6">
               {serviceAreas.map((area, index) => (
                 <Badge key={index} variant="secondary" className="bg-white/10 text-white border-white/20 hover:bg-white/20 justify-center py-2">
@@ -128,16 +193,25 @@ const Footer = () => {
         {/* Call to Action Section */}
         <div className="mt-16 pt-8 border-t border-white/20">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4">جاهز لبدء مشروعك؟</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('readyToStart')}</h3>
             <p className="text-blue-light mb-6 max-w-2xl mx-auto">
-              احصل على استشارة مجانية وعرض سعر مفصل لمشروعك اليوم
+              {t('ctaDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg">
-                استشارة مجانية
+              <Button 
+                variant="hero" 
+                size="lg"
+                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like a free consultation', '_blank')}
+              >
+                {t('freeConsultation')}
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-primary">
-                طلب عرض سعر
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-white text-white hover:bg-white hover:text-blue-primary"
+                onClick={() => window.open('https://wa.me/971507323644?text=Hello, I would like to request a quote', '_blank')}
+              >
+                {t('getQuote')}
               </Button>
             </div>
           </div>

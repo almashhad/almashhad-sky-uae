@@ -145,7 +145,16 @@ export const translations = {
     arabicLang: "اللغة العربية",
     english: "English",
     englishLang: "English Language",
-    languageNote: "يمكنك تغيير اللغة في أي وقت • You can change the language anytime"
+    languageNote: "يمكنك تغيير اللغة في أي وقت • You can change the language anytime",
+    
+    // Social Media
+    followUs: "تابعنا على",
+    socialMediaText: "تابعنا على مواقع التواصل الاجتماعي لآخر الأخبار والمشاريع",
+    instagram: "انستجرام",
+    tiktok: "تيك توك", 
+    youtube: "يوتيوب",
+    twitter: "تويتر",
+    pinterest: "بنترست"
   },
   
   en: {
@@ -294,6 +303,15 @@ export const translations = {
     arabicLang: "Arabic Language",
     english: "English",
     englishLang: "English Language",
-    languageNote: "You can change the language anytime • يمكنك تغيير اللغة في أي وقت"
+    languageNote: "You can change the language anytime • يمكنك تغيير اللغة في أي وقت",
+    
+    // Social Media
+    followUs: "Follow Us",
+    socialMediaText: "Follow us on social media for latest news and projects",
+    instagram: "Instagram",
+    tiktok: "TikTok",
+    youtube: "YouTube", 
+    twitter: "Twitter",
+    pinterest: "Pinterest"
   }
 };
