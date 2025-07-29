@@ -213,7 +213,12 @@ const About = () => {
               </p>
             </div>
           </div>
-          <Button variant="hero" size="lg" className="mt-8 px-8 py-4 text-base w-full sm:w-auto">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="mt-8 px-8 py-4 text-base w-full sm:w-auto"
+            onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود التواصل معكم اليوم', '_blank')}
+          >
             تواصل معنا اليوم
           </Button>
         </div>

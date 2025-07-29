@@ -242,10 +242,20 @@ const Services = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto lg:max-w-none lg:mx-0">
-              <Button variant="professional" size="lg" className="w-full sm:w-auto py-3 sm:py-4 text-sm sm:text-base">
+              <Button 
+                variant="professional" 
+                size="lg" 
+                className="w-full sm:w-auto py-3 sm:py-4 text-sm sm:text-base"
+                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود الحصول على استشارة مجانية', '_blank')}
+              >
                 احصل على استشارة مجانية
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto py-3 sm:py-4 text-sm sm:text-base">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="w-full sm:w-auto py-3 sm:py-4 text-sm sm:text-base"
+                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود طلب عرض سعر مفصل', '_blank')}
+              >
                 اطلب عرض سعر
               </Button>
             </div>

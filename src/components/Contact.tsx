@@ -138,11 +138,21 @@ const Contact = () => {
                   </div>
 
                   <div className="flex flex-col gap-4">
-                    <Button variant="professional" size="lg" className="w-full py-4 text-base">
+                    <Button 
+                      variant="professional" 
+                      size="lg" 
+                      className="w-full py-4 text-base"
+                      onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود إرسال طلب للحصول على خدماتكم', '_blank')}
+                    >
                       <Send className="h-5 w-5 ml-2" />
                       إرسال الطلب
                     </Button>
-                    <Button variant="outline" size="lg" className="w-full py-4 text-base">
+                    <Button 
+                      variant="outline" 
+                      size="lg" 
+                      className="w-full py-4 text-base"
+                      onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود التحدث معكم مباشرة', '_blank')}
+                    >
                       <Phone className="h-5 w-5 ml-2" />
                       اتصل بنا مباشرة
                     </Button>
@@ -180,7 +190,12 @@ const Contact = () => {
               <CardContent className="p-6 text-center">
                 <h4 className="font-bold text-lg mb-2">خدمة الطوارئ</h4>
                 <p className="text-blue-light mb-4">متوفرون لخدمتكم على مدار الساعة</p>
-                <Button variant="hero" size="lg" className="w-full">
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، لدي طارئ وأحتاج لخدماتكم فوراً', '_blank')}
+                >
                   <Phone className="h-5 w-5 ml-2" />
                   اتصال طارئ
                 </Button>
@@ -234,10 +249,20 @@ const Contact = () => {
               تواصل معنا اليوم واحصل على استشارة مجانية وعرض سعر مفصل لمشروعك
             </p>
             <div className="flex flex-col gap-4 justify-center max-w-md mx-auto sm:max-w-none sm:mx-0 sm:flex-row">
-              <Button variant="professional" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto">
+              <Button 
+                variant="professional" 
+                size="lg" 
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto"
+                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود الحصول على عرض سعر مجاني لمشروعي', '_blank')}
+              >
                 احصل على عرض سعر مجاني
               </Button>
-              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto"
+                onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود حجز موعد استشارة', '_blank')}
+              >
                 حدد موعد استشارة
               </Button>
             </div>

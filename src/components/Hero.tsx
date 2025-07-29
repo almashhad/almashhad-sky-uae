@@ -104,6 +104,7 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               className="text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 border-2 border-white/50 text-white hover:bg-gradient-glass hover:border-gold-accent hover:text-gold-accent w-full transition-all duration-300 font-bold backdrop-blur-md hover:shadow-glow hover:scale-105"
+              onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود مشاهدة أعمالكم المميزة', '_blank')}
             >
               شاهد أعمالنا المميزة
             </Button>
@@ -114,6 +115,7 @@ const Hero = () => {
             {/* Contact Button with Animation */}
             <Button 
               className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold text-lg py-6 px-8 rounded-2xl shadow-glow border-0 transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-pulse hover:animate-none group"
+              onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود التواصل معكم للاستفسار عن خدماتكم', '_blank')}
             >
               <div className="flex items-center justify-center gap-3">
                 <span className="group-hover:animate-bounce">📞</span>
@@ -126,6 +128,7 @@ const Hero = () => {
             <Button 
               variant="outline"
               className="w-full border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold text-lg py-6 px-8 rounded-2xl backdrop-blur-md transition-all duration-300 transform hover:scale-105 hover:shadow-glow group"
+              onClick={() => window.open('https://wa.me/971507323644?text=مرحباً، أود الحصول على عرض سعر لمشروعي', '_blank')}
             >
               <div className="flex items-center justify-center gap-3">
                 <span className="group-hover:rotate-12 transition-transform duration-300">💰</span>
