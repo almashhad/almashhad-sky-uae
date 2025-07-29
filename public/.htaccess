@@ -1,5 +1,13 @@
-# React Router Support for Hostinger
+# React Router Support for almashhadsky.com
 RewriteEngine on
+
+# Force HTTPS for security
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force www to non-www (canonical URL)
+RewriteCond %{HTTP_HOST} ^www\.almashhadsky\.com [NC]
+RewriteRule ^(.*)$ https://almashhadsky.com/$1 [L,R=301]
 
 # Handle client-side routing
 RewriteCond %{REQUEST_FILENAME} !-f
